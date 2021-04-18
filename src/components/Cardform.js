@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import './Cardform.css'
 
-const CardForm = () => {
+const CardForm = (props) => {
 
     const [inputName, setInputName] = useState('');
     const [inputDate, setInputDate] = useState('');
@@ -29,8 +29,7 @@ const CardForm = () => {
             amount: inputAmount
         }
 
-        console.log(submitData);
-
+        props.onAddCard(submitData);
         setInputName('');
         setInputDate('');
         setInputAmount('');

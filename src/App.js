@@ -34,12 +34,18 @@ function App() {
     }
 
   ]
+
+  const addCard = (expenseData) => {
+    console.log("Ramon");
+    console.log(expenseData);
+
+  }
     
   return (
     <div className="App">
       <Header />
-      <CardForm />
-      <CardBlock cards={cards}>
+      <CardForm onAddCard={addCard}/>
+      <CardBlock cards={cards} >
       </CardBlock>
         
     </div>
